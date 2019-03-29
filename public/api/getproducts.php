@@ -25,7 +25,7 @@ while($row = mysqli_fetch_assoc($result)){
     } else{
         $image = $row['images'];
         unset ($row['images']);
-        $row['images'][] = [$image];
+        $row['images'] = [$image];
         $row['price'] = intval($row['price']);
         $data[$currentID] = $row;
     };
