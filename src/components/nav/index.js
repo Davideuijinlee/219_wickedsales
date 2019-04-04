@@ -17,6 +17,8 @@ class Nav extends Component {
         );
     }
     render(){
+        const links = this.renderLinks();
+
         return (
             <Fragment>
                 <nav className="blue lighten-1">
