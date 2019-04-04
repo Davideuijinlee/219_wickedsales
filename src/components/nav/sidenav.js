@@ -8,7 +8,7 @@ class Sidenav extends Component {
    render(){
        return(
            <ul ref={(element) => {this.sidenav = element}} id="sidenav" className="sidenav">
-               {this.props.links}
+           {this.props.links}
            </ul>
        );
    }
