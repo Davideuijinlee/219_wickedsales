@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 class ProductDetails extends Component {
@@ -6,6 +7,7 @@ class ProductDetails extends Component {
         // Call server to get product details
 
         console.log('Fetch product with id of:', params.product_id);
+
     }
     render(){
         return (
@@ -15,5 +17,5 @@ class ProductDetails extends Component {
         );
     }
 }
-
 export default ProductDetails;
+

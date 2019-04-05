@@ -1,6 +1,7 @@
 {
 	"success": true,
 	"products": [{
+
 		"name": "Wicked Thing",
 		"price": 2000,
 		"images": ["images/wickedpic.jpg"],
@@ -16,4 +17,5 @@
 		"images": ["images/wickedbrick.jpg"],
 		"id": 3
 	}]
+
 }

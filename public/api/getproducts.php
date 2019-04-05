@@ -1,9 +1,9 @@
 <?php
 
-
 require_once('functions.php');
 
 set_exception_handler('handleError');
+
 
 require_once('config.php');
 
@@ -56,7 +56,4 @@ $json_output = json_encode( $output );
 print( $json_output );
 
 ?>
-
-
-
 

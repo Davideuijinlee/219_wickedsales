@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import ProductItem from './product_item';
@@ -35,9 +36,11 @@ class ProductList extends Component {
                 <ul className="collection">
                     {productList}
                 </ul>
+
             </div>
         );
     }
 }
 
 export default ProductList;
+

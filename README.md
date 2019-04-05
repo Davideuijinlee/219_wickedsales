@@ -4,6 +4,7 @@
 
 > E-commerce site built with ReactJS, PHP, and MySQL
 
+
 ### Setup Instructions
 
 > 1. Fork this repo
@@ -19,7 +20,9 @@
 >    - Use phpMyAdmin (or similar) to create a database
 > 1. Start dev server
 >    - `npm start`
-> 1. Open a browser and navigate to `localhost:3000`
+
+> 1. Open a browser and navigate to `localhost:3000`.
+
 
 ### Bundle For Deployment
 

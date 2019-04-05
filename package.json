@@ -1,7 +1,10 @@
 {
   "name": "wicked_sales",
   "version": "1.0.0",
+
   "description": "Generic E-Commerce website with ReactJS Client and PHP Back-end",
+
+
   "main": "index.js",
   "proxy": {
     "/api/*": {
@@ -18,6 +21,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Davideuijinlee/219_wickedsales.git"
+
   },
   "dependencies": {
     "axios": "^0.18.0",
