@@ -2,7 +2,8 @@
 
 # Wicked Sales
 
-> E-commerce site built with ReactJS, PHP and MySQL
+> E-commerce site built with ReactJS, PHP, and MySQL
+
 
 ### Setup Instructions
 
@@ -19,7 +20,9 @@
 >    - Use phpMyAdmin (or similar) to create a database
 > 1. Start dev server
 >    - `npm start`
+
 > 1. Open a browser and navigate to `localhost:3000`.
+
 
 ### Bundle For Deployment
 

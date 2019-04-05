@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+
+import React, { Component } from 'react';
 
 class ProductDetails extends Component {
     componentDidMount(){
-        const {params} = this.props.match;
-        console.log('fetch product with id of', params.product_id)
+        const { params } = this.props.match;
+        // Call server to get product details
+
+        console.log('Fetch product with id of:', params.product_id);
+
     }
     render(){
         return (
@@ -13,5 +17,5 @@ class ProductDetails extends Component {
         );
     }
 }
-
 export default ProductDetails;
+
