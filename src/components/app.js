@@ -11,9 +11,10 @@ const App = () => (
     <div>
         <Nav/>
         <div className="app">
-            <Route exact path="/" component={Home}/>
-            <Route path="/products" component={ProductRoutes}/>
-
+            <div className="container">
+                <Route exact path="/" component={Home}/>
+                <Route path="/products" component={ProductRoutes}/>
+            </div>
         </div>
     </div>
 );
