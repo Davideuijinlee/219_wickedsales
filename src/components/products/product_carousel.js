@@ -1,0 +1,28 @@
+import React, {Component} from 'react';
+
+class ProductCarousel extends Component {
+    componentDidMount(){
+        const config = {
+            numVisible: 1,
+            indicators: true
+        };
+
+        M.Carousel.init(this.carousel, config);
+    }
+    render(){
+        const items = this.props.images.map((img)=>{
+            return (
+                <a key={img} href="#" className="carousel-item">
+                <img src={`/dist/${img}`} alt="Product Image"/>
+                </a>
+            )
+        });
+        return (
+            <div ref={(element) => this.carousel = element} className="col s12 m8 carousel">
+                {items}
+            </div>
+        )
+    }
+}
+
+export default ProductCarousel;
