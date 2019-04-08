@@ -40,12 +40,21 @@ class ProductDetails extends Component{
             return <h1 className="center">No Product Found</h1>
         }
 
-        const {description='No description available', name} = details;
+        const {description='No description available', name, images, price} = details;
 
         return(
             <div className="product-details">
-                <h1 className="center">{name}</h1>
-                <p>{description}</p>
+                <div className="itemContainer">
+                    <div className="imageContainer">
+                        <img className="itemImage" src={`../../dist/${images[0]}`}  alt=""/>
+                    </div>
+                <div className="descriptionContainer">
+                    <h1 className="productTitle">{name}</h1>
+                    <div className="productPrice">${(price/100).toFixed(2)}</div>
+                    <div className="productDescription">{description}</div>
+                    <div className="shipping">Free Shipping on orders over $50!</div>
+                </div>
+                </div>
             </div>
         );
     }
