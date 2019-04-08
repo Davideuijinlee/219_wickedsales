@@ -6,53 +6,44 @@
             background-color: chartreuse;
         }
     };
+
+}
+.product-details{
+
+    .product-price{
+        font-size: 5em;
+        font-weight:bold;
+    }
+    .carousel{
+        .indicators{
+            background-color: rgb(242, 242, 242)
+        }
+    }
+
+    .add-to-cart {
+        font-size: 2em;
+
+        .qty-container {
+            margin: 0 18px;
+
+            button {
+                margin: 0 12px;
+            }
+
+            .product-qty {
+                padding: 5px 15px;
+                position: relative;
+                top: 5px;
+                background-color: #efefef;
+            }
+        }
+
+        button {
+            position: relative;
+            top: 2px;
+        }
+    }
 }
 
-.itemContainer{
-    width: 100vw;
-    height: 100vh;
-    display:flex;
-}
 
-.imageContainer{
-    width:40%;
-    height:100%;
-    position:relative;
-    
-}
-
-.itemImage{
-    width: 80%;
-    height:80%;
-    position:absolute;
-    top:10%;
-}
-.descriptionContainer{
-    width:60%;
-    height:100%;
-    font-family: 'Anton', sans-serif;
-    position: flex;
-    
-}
-
-.productTitle, .productDescription, .productPrice{
-    width: 50%;
-    height:10%;
-    position:relative;
-    top:5vh;
-    display:inline-block;
-}
-
-.productPrice{
-    position: relative;
-    width:40%;
-    display:inline-block;
-    font-size: 4.2rem;
-}
-
-.shipping{
-    width: 50%;
-    position:relative;
-    top:5%;
-}
 

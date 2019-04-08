@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import axios from'axios';
 import ProductCarousel from './product_carousel'
+import MiscDetails from './misc_details';
+import {formatMoney} from '../../helpers';
+
 
 class ProductDetails extends Component{
     state ={
@@ -41,13 +44,34 @@ class ProductDetails extends Component{
             return <h1 className="center">No Product Found</h1>
         }
 
-        const {description='No description available', name, images, price} = details;
+        const {description='No description available', name, images, price, miscDetails} = details;
 
         return(
             <div className="product-details">
                 <h1 className="center">{name}</h1>
-                <ProductCarousel images={images}/>
-                <p>{description}</p>
+                <div className="row">
+                    <ProductCarousel images={images}/>
+                    <div className="col s12 m4">
+                    <div className="right-align product-price">{formatMoney(price)}</div>
+                    <div className="right-align add-to-cart">
+                        <span className="qty-container">
+                            <button className="btn-small btn-floating red lighten-1">
+                                <i className="material-icons">remove</i>
+                            </button>
+                                <span className="product-qty">1</span>    
+                            <button className="btn-small btn-floating blue lighten-1">
+                                <i className="material-icons">add</i>
+                            </button>
+                        </span>
+                        <button className="btn purple darken-1">
+                            <i className="material-icons">add_shopping_cart</i>
+                        </button>
+                    </div>
+                        <p>{description}</p>
+                        <MiscDetails details={miscDetails}/>
+                    </div>
+                </div>
+                
             </div>
         );
     }
