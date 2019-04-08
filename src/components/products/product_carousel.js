@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class ProductCarousel extends Component {
     componentDidMount(){
-        console.log('Carousel Div:', this.carousel);
         const config = {
             numVisible: 1,
             indicators: true
@@ -11,7 +10,6 @@ class ProductCarousel extends Component {
         M.Carousel.init(this.carousel, config);
     }
     render(){
-        console.log('Props:', this.props);
         const items = this.props.images.map((img)=>{
             return (
                 <a key={img} href="#" className="carousel-item">

@@ -6,10 +6,6 @@ export default props => {
 
    const {details} = props;
 
-   console.log('Misc Details:', details);
-
-   console.log('Objects Keys', Object.keys(details));
-
    const additionalInfo = Object.keys(details).map((key) => {
 
        let values = details[key];

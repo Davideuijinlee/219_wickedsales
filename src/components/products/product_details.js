@@ -34,7 +34,6 @@ class ProductDetails extends Component{
     }
 
     render(){
-        console.log('product details:', this.state.details);
 
         const {details} = this.state;
 
