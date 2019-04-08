@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from'axios';
+import ProductCarousel from './product_carousel'
 
 class ProductDetails extends Component{
     state ={
@@ -44,17 +45,9 @@ class ProductDetails extends Component{
 
         return(
             <div className="product-details">
-                <div className="itemContainer">
-                    <div className="imageContainer">
-                        <img className="itemImage" src={`../../dist/${images[0]}`}  alt=""/>
-                    </div>
-                <div className="descriptionContainer">
-                    <h1 className="productTitle">{name}</h1>
-                    <div className="productPrice">${(price/100).toFixed(2)}</div>
-                    <div className="productDescription">{description}</div>
-                    <div className="shipping">Free Shipping on orders over $50!</div>
-                </div>
-                </div>
+                <h1 className="center">{name}</h1>
+                <ProductCarousel images={images}/>
+                <p>{description}</p>
             </div>
         );
     }
