@@ -24,7 +24,7 @@ class ProductList extends Component {
     getProducts(){
         // change
         axios.get('/api/getproducts.php').then((resp) => {
-
+            console.log(resp);
             this.setState({
                 products: resp.data.products
             });
@@ -32,6 +32,7 @@ class ProductList extends Component {
     }
 
     render(){
+        // debugger;
         const productList = this.state.products.map((product) => {
             return <ProductItem key={product.id} {...product} goToDetails={this.goToDetails}/>;
         });
