@@ -32,7 +32,6 @@ class ProductDetails extends Component {
     }
 
     render(){
-        console.log('product details:', this.state.details);
         const {params} = this.props.match;
 
         const {details} = this.state;
