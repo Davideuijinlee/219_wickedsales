@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ProductAdd from './product_add';
 import ProductCarousel from './product_carousel';
 import MiscDetails from './misc_details';
 import { formatMoney } from '../../helpers';
@@ -31,45 +32,34 @@ class ProductDetails extends Component {
     }
 
     render(){
-        const { details } = this.state;
+        const {params} = this.props.match;
+
+        const {details} = this.state;
 
         if(details === null){
-            return <h1>Loading...</h1>
+            return <h1>Loading...</h1> //make some fancy loading animation
         } else if(!details){
             return <h1 className="center">No Product Found</h1>
         }
 
-        const { description = 'No description available', images, miscDetails, name, price } = details;
+        const {description='No description available', name, images, price, miscDetails} = details;
 
-        return (
+        return(
             <div className="product-details">
                 <h1 className="center">{name}</h1>
                 <div className="row">
-                    <ProductCarousel images={images} />
-                    <div className="col s12 m8">
-                        <div className="right-align product-price">{formatMoney(price)}</div>
-                        <div className="right-align add-to-cart">
-                            <span className="qty-container">
-                                <button className="btn btn-small btn-floating purple lighten-1">
-                                    <i className="material-icons">remove</i>
-                                </button>
-                                <span className="product-qty">1</span>
-                                <button className="btn btn-small btn-floating purple lighten-1">
-                                    <i className="material-icons">add</i>
-                                </button>
-                            </span>
-                            
-                            <button className="btn purple darken-2">
-                                <i className="material-icons">add_shopping_cart</i>
-                            </button>
-                        </div>
-                        <p>{description}</p>
-                        <MiscDetails details={miscDetails}/>
+                    <ProductCarousel images={images}/>
+                    <div className="col s12 m4">
+                    <div className="right-align product-price">{formatMoney(price)}</div>
+                    <ProductAdd productId={params.product_id}/>
+                    <p>{description}</p>
+                    <MiscDetails details={miscDetails}/>
                     </div>
                 </div>
+                
             </div>
         );
-    }
+    }  
 }
 
 export default ProductDetails;
