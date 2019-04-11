@@ -88,7 +88,6 @@
 
 		$row = mysqli_fetch_assoc($cart_result);
 		
-		print_r($row);
 		$cart_quantity = $row['@count'];
 		$product_price = $row['@price'];
 		
