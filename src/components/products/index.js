@@ -1,15 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import ProductList from './product_list';
 import ProductDetails from './product_details';
 import './products.scss';
 
 export default props => {
-
-    return (
+    return(
         <div className="products">
-            <Route path="/products" exact component={ProductList}/>
-            <Route path="/products/:product_id" component={ProductDetails}/>
+            <Route exact path="/products" component ={ProductList}/>
+            <Route path="/products/:product_id" render={routingProps => {
+                return <ProductDetails {...routingProps} updateCart={props.updateCart}/>
+            }} />
         </div>
     );
 }
